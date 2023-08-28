@@ -6,7 +6,9 @@
     <meta name="description" content="어려웠던 역사공부, 이제는 살아있는 지도와 함께해요.">
     <meta name="keywords" content="역사, 지도, 인문지도, 역사지도, 역사공부, 한국사지도, 한국사, 세계사, 동아시아사">
     <title>지도로 공부하는 역사, FunMap</title>
-</head>
+    <script defer scr="C:\Users\Hikamoto\Desktop\test\index.js"></script>
+    <script defer scr="https://maps.googleapis.com/maps/api/js?key=<AIzaSyAvpjGPjLYlDYj_5qLQgzd0ItqQlGCT-e0>&callback=initMap"></script>
+   </head>
 <body>
     <style>
         body {
@@ -28,6 +30,14 @@
             width:130px;
             margin:0%;
             padding:20px;
+        }
+        #map {
+            height: 500%;
+        }
+        html, body {
+            height: 700px;
+            margin: 0;
+            padding: 0;
         }
     </style>
         <h1>FunMap</h1>
@@ -63,8 +73,23 @@
                     network itself requires minimal structure. Messages are broadcast on a best effort
                     basis, and nodes can leave and rejoin the network at will, accepting the longest
                     proof-of-work chain as proof of what happened while they were gone.
+                    <br>
+                    <br>
+                    <br>
                 </p>
+                <div id="map"></div>
             </div>
         </div>
-</body>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 36.397, lng: 126.644},
+          zoom: 8
+        });
+      }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvpjGPjLYlDYj_5qLQgzd0ItqQlGCT-e0&callback=initMap"
+      async defer></script>
+    </body>
 </html>
